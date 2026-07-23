@@ -1,12 +1,23 @@
 <?php
 
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SchoolClass;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\MajorController;
+use App\Http\Controllers\SchoolClass\IndexController;
+use App\Http\Controllers\SchoolClass\CreateController;
+use App\Http\Controllers\SchoolClass\StoreController;
+use App\Http\Controllers\SchoolClass\ShowController;
+use App\Http\Controllers\SchoolClass\EditController;
+use App\Http\Controllers\SchoolClass\UpdateController;
+use App\Http\Controllers\SchoolClass\DestroyController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Menejemen Data Siswa (Action Controller)
 Route::name('students.')->prefix('students')->group(function () {
     Route::get('/', [StudentController::class, 'index'])->name('index');
 
@@ -23,6 +34,8 @@ Route::name('students.')->prefix('students')->group(function () {
     Route::delete('/{id}', [StudentController::class, 'destroy'])->name('destroy');
 
 });
+
+// Menejemen Data Guru (Action Controller)
 
 Route::name('teacher.')->prefix('teacher')->group(function() {
  
@@ -41,4 +54,30 @@ Route::put('/{id}', [TeacherController::class, 'update'])->name('update');
 Route::delete('{id}', [TeacherController::class, 'destroy'])->name('destroy');
  
 });
+
+// Manajemen Data Kelas Sekolah (Invokable)
+
+Route::name('classes.')->prefix('classes')->group(function() {
+ 
+Route::get('/', IndexController::class)->name('index');
+ 
+Route::get('/{id}', ShowController::class)->name('show');
+ 
+Route::get('/create', CreateController::class)->name('create');
+ 
+Route::get('/{id}/edit', EditController::class)->name('edit');
+ 
+Route::post('/', StoreController::class)->name('store');
+ 
+Route::put('/{id}', UpdateController::class)->name('update');
+ 
+Route::delete('/{id}', DestroyController::class)->name('destroy');
+ 
+});
+
+// Manajemen Data Jurusan (Resource Controller)
+Route::resource('major', MajorController::class);
+    
+
+
 
