@@ -76,7 +76,7 @@ Route::delete('/{id}', DestroyController::class)->name('destroy');
 });
 
 // Manajemen Data Jurusan (Resource Controller)
-Route::resource('major', MajorController::class);
+Route::resource('majors', MajorController::class);
     
 
 
