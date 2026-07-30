@@ -63,7 +63,7 @@ Route::name('classes.')->prefix('classes')->group(function () {
 
     Route::get('/{id}', ShowController::class)->name('show')->whereNumber('id');
 
-    Route::get('/create', CreateController::class)->name('create   ');
+    Route::get('/create', CreateController::class)->name('create');
 
     Route::get('/{id}/edit', EditController::class)->name('edit');
 
