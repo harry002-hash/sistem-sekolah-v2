@@ -13,7 +13,7 @@ class StudentController extends Controller
             [
                 'id' => 1,
                 'nis' => '1001',
-                'name' => 'Andi',
+                'name' => 'Budi Ariyanto',
                 'class' => 'XII TKJ 2',
                 'major'=> 'TKJ'
             ],
@@ -33,7 +33,7 @@ class StudentController extends Controller
 
     public function show(string $id)
     {   
-        $title = 'Sistem Sekolah - Menampilkan Daftar Siswa';
+        $title = 'Sistem Sekolah - Menampilkan Detail Siswa';
         return view('students.show', [
             'title' => $title,
         ]);

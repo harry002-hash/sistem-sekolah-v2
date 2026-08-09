@@ -24,7 +24,7 @@ Route::name('students.')->prefix('students')->group(function () {
     Route::get('/{id}', [StudentController::class, 'show'])->name('show')->whereNumber('id');
 
     Route::get('/create', [StudentController::class, 'create'])->name('create');
-
+    
     Route::get('/{id}/edit', [StudentController::class, 'edit'])->name('edit');
 
     Route::post('/', [StudentController::class, 'store'])->name('store');
@@ -77,7 +77,3 @@ Route::name('classes.')->prefix('classes')->group(function () {
 
 // Manajemen Data Jurusan (Resource Controller)
 Route::resource('majors', MajorController::class);
-
-
-
-
