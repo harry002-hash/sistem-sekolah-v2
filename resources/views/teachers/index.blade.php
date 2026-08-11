@@ -4,7 +4,7 @@
 
 @section('content')
 
-  <x-alert type="SUCCESS">Terdapat kesalahan ketika menambahkan data kedalam sistem </x-alert>
+  <!-- <x-alert type="SUCCESS">Terdapat kesalahan ketika menambahkan data kedalam sistem </x-alert> -->
 
 
 

@@ -4,7 +4,7 @@
 
 @section('content')
 
-  <x-alert type="SUCCESS">Terdapat kesalahan ketika menambahkan data kedalam sistem </x-alert>
+  <!-- <x-alert type="SUCCESS">Terdapat kesalahan ketika menambahkan data kedalam sistem </x-alert> -->
 
 
 <div class="mb-8 flex items-end justify-between border-b border-[#E5E3DB] pb-5">
