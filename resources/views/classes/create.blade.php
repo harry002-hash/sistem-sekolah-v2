@@ -43,11 +43,11 @@
             <select id="grade" name="grade"
                 class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
 
-                <option value="L">X</option>
+                <option value="">X</option>
 
-                <option value="P">XI</option>
+                <option value="">XI</option>
 
-                <option value="P">XII</option>
+                <option value="">XII</option>
 
             </select>
 
@@ -60,7 +60,7 @@
             <label for="major"
                 class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Jurusan</label>
 
-            <select id="major_id" name="major_id"
+            <select id="major" name="major"
                 class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
 
                 <option value="">Pilih jurusan</option>
@@ -77,10 +77,10 @@
 
         <div>
 
-            <label for="homeroom_teacher"
+            <label for="teacher"
                 class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Wali Kelas</label>
 
-            <select id="teacher_id" name="teacher_id"
+            <select id="teacher" name="teacher"
                 class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm focus:border-[#A16207] focus:bg-white focus:outline-none">
 
                 <option value="">Pilih Wali Kelas</option>
