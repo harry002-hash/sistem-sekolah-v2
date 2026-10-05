@@ -12,7 +12,8 @@
 
         <h1 class="font-display mt-2 text-3xl font-semibold text-[#16213A]">Ubah Data Jurusan</h1>
 
-        <p class="mt-1 text-sm text-slate-500">Memperbarui catatan Jurusan <span class="font-medium text-[#16213A]">Akuntansi</span>.</p>
+        <p class="mt-1 text-sm text-slate-500">Memperbarui catatan Jurusan <span
+                class="font-medium text-[#16213A]">Akuntansi</span>.</p>
 
     </div>
 
@@ -20,16 +21,18 @@
 
         <div>
 
-            <label for="code" class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Kode Jurusan</label>
+            <label for="code" class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Kode
+                Jurusan</label>
 
             <input type="text" id="code" name="code" placeholder="AKL"
                 class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
 
         </div>
 
-         <div>
+        <div>
 
-            <label for="name" class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Nama Jurusan</label>
+            <label for="name" class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Nama
+                Jurusan</label>
 
             <input type="text" id="name" name="name" placeholder="Akuntansi dan Keuangan Lembaga"
                 class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
@@ -38,14 +41,14 @@
 
         <div>
 
-            <label for="description" class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Deskripsi</label>
+            <label for="description"
+                class="mb-1.5 block text-xs font-semibold uppercase tracking-[0.1em] text-[#16213A]">Deskripsi</label>
 
-            <input type="textarea" id="description" name="description" placeholder="Penjelasan Singkat Mengenai Jurusan"
-                class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none">
 
+            <textarea id="description" name="description" placeholder="Penjelasan Singkat Mengenai Jurusan"
+                class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none"
+                class="w-full border border-[#D9D6CD] bg-[#FCFBF8] px-3.5 py-2.5 text-sm placeholder:text-slate-400 focus:border-[#A16207] focus:bg-white focus:outline-none"></textarea>
         </div>
-
-
 
         <div class="flex justify-end gap-4 border-t border-[#EFEDE6] pt-6">
 
