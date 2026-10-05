@@ -1,37 +1,36 @@
 <?php
 
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\SchoolClass;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\MajorController;
-use App\Http\Controllers\SchoolClass\IndexController;
 use App\Http\Controllers\SchoolClass\CreateController;
-use App\Http\Controllers\SchoolClass\StoreController;
-use App\Http\Controllers\SchoolClass\ShowController;
-use App\Http\Controllers\SchoolClass\EditController;
-use App\Http\Controllers\SchoolClass\UpdateController;
 use App\Http\Controllers\SchoolClass\DestroyController;
+use App\Http\Controllers\SchoolClass\EditController;
+use App\Http\Controllers\SchoolClass\IndexController;
+use App\Http\Controllers\SchoolClass\ShowController;
+use App\Http\Controllers\SchoolClass\StoreController;
+use App\Http\Controllers\SchoolClass\UpdateController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-//Menejemen Data Siswa (Action Controller)
+// Menejemen Data Siswa (Action Controller)
 Route::name('students.')->prefix('students')->group(function () {
     Route::get('/', [StudentController::class, 'index'])->name('index');
 
-    Route::get('/{id}', [StudentController::class, 'show'])->name('show')->whereNumber('id');
-
     Route::get('/create', [StudentController::class, 'create'])->name('create');
-    
-    Route::get('/{id}/edit', [StudentController::class, 'edit'])->name('edit');
+
+    Route::get('/{student}', [StudentController::class, 'show'])->name('show');
+
+    Route::get('/{student}/edit', [StudentController::class, 'edit'])->name('edit');
 
     Route::post('/', [StudentController::class, 'store'])->name('store');
 
-    Route::put('/{id}', [StudentController::class, 'update'])->name('update');
+    Route::put('/{student}', [StudentController::class, 'update'])->name('update');
 
-    Route::delete('/{id}', [StudentController::class, 'destroy'])->name('destroy');
+    Route::delete('/{student}', [StudentController::class, 'destroy'])->name('destroy');
 
 });
 
@@ -41,9 +40,9 @@ Route::name('teachers.')->prefix('teachers')->group(function () {
 
     Route::get('/', [TeacherController::class, 'index'])->name('index');
 
-    Route::get('/{id}', [TeacherController::class, 'show'])->name('show')->whereNumber('id');
-    
     Route::get('/create', [TeacherController::class, 'create'])->name('create');
+
+    Route::get('/{id}', [TeacherController::class, 'show'])->name('show')->whereNumber('id');
 
     Route::get('/{id}/edit', [TeacherController::class, 'edit'])->name('edit');
 
@@ -61,9 +60,9 @@ Route::name('classes.')->prefix('classes')->group(function () {
 
     Route::get('/', IndexController::class)->name('index');
 
-    Route::get('/{id}', ShowController::class)->name('show')->whereNumber('id');
-
     Route::get('/create', CreateController::class)->name('create');
+
+    Route::get('/{id}', ShowController::class)->name('show')->whereNumber('id');
 
     Route::get('/{id}/edit', EditController::class)->name('edit');
 
